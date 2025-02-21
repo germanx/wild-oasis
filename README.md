@@ -1,8 +1,71 @@
-# React + Vite
+# React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## vite
 
-Currently, two official plugins are available:
+npm create vite@4
+npm i
+npm i eslint vite-plugin-eslint eslint-config-react-app --save-dev
+npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm i react-router-dom@6
+npm i styled-components
+npm i react-icons
+npm i @supabase/supabase-js
+
+### vite.config.js
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import eslint from 'vite-plugin-eslint';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+plugins: [react(), eslint()],
+});
+
+### .eslintrc.json
+
+{
+"extends": "react-app"
+}
+
+### vite.config.js
+
+import eslint from 'vite-plugin-eslint';
+
+plugins: [react(), eslint()],
+
+### .eslintrc.cjs
+
+I added this rule in the eslintrc file and re-run the npm run dev
+
+"rules": {
+"react/prop-types": "off",
+"no-unused-vars": "off",
+}
+--
+// eslint-disable-next-line
+
+---
+
+## create app
+
+npx create-react-app profile-card
+npx create-react-app@5 profile-card
+
+npm config set legacy-peer-deps true
+
+## npm start
+
+---
+
+## console
+
+ctrl+alt+j
+
+## OMDb API
+
+Here is your key: c4f9f630
+OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=c4f9f630
+
+http://www.omdbapi.com/?apikey=[yourkey]&
