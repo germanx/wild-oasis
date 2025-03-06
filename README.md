@@ -21,6 +21,10 @@ npm i react-hook-form@7
 npm i @tanstack/react-query@4
 npm i @tanstack/react-query-devtools@4
 
+### charts
+
+npm i recharts@2
+
 ### vite.config.js
 
 import { defineConfig } from 'vite';
